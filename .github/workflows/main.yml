@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Java (required for OWASP Dependency-Check)
         uses: actions/setup-java@v3
@@ -24,7 +24,7 @@ jobs:
           format: 'HTML'
 
       - name: Upload Dependency-Check Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4 # Updated to v4
         with:
           name: dependency-check-report
           path: dependency-check-report.html
